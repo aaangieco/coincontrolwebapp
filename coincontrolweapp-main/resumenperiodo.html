@@ -78,7 +78,6 @@
                         <table id="tablaIngresos" class="table-fixed shadow-lg border-2 lg:max-w-6xl rounded">
                             <thead class="bg-yellow-200 hover:bg-black hover:text-white duration-300">
                                 <tr class="text-center">
-                                    <th>No.</th>
                                     <th>Fecha</th>
                                     <th>Categoría</th>
                                     <th>Monto</th>
@@ -88,7 +87,6 @@
                             </tbody>
                             <tfoot>
                                 <tr class="cursor-pointer duration-300 hover:bg-slate-300">
-                                    <td class="py-3 px-6"></td>
                                     <td class="py-3 px-6"></td>
                                     <td class="py-3 px-6 font-semibold">Total</td>
                                     <td class="py-3 px-6 " id="totalIngresos">0</td>
@@ -103,7 +101,6 @@
                         <table id="tablaEgresos" class="table-fixed shadow-lg border-2 lg:max-w-6xl rounded">
                             <thead class="bg-yellow-200 hover:bg-black hover:text-white duration-300">
                                 <tr class="text-center">
-                                    <th>No.</th>
                                     <th>Fecha</th>
                                     <th>Categoría</th>
                                     <th>Monto</th>
@@ -113,7 +110,6 @@
                             </tbody>
                             <tfoot>
                                 <tr class="cursor-pointer duration-300 hover:bg-slate-300">
-                                    <td class="py-3 px-6"></td>
                                     <td class="py-3 px-6"></td>
                                     <td class="py-3 px-6 font-semibold">Total</td>
                                     <td class="py-3 px-6 " id="totalEgresos">0</td>
@@ -230,10 +226,9 @@
                     let sumaEgresos = 0;
 
                     json.result.forEach(element => {
-
+                        
                         $("#tablaEgresos tbody").append(`                        
                                 <tr class="cursor-pointer duration-300 hover:bg-slate-300">
-                                    <td class="py-3 px-6">${element.egreso_id}</td>
                                     <td class="py-3 px-6">${element.egreso_fecha}</td>
                                     <td class="py-3 px-6">${element.egreso_concepto}</td>
                                     <td class="py-3 px-6">${element.egreso_monto}</td>
@@ -257,7 +252,6 @@
 
                         $("#tablaIngresos").append(`
                                 <tr class="cursor-pointer duration-300 hover:bg-slate-300">
-                                    <td class="py-3 px-6">${element.ingreso_id}</td>
                                     <td class="py-3 px-6">${element.ingreso_fecha}</td>
                                     <td class="py-3 px-6">${element.ingreso_concepto}</td>
                                     <td class="py-3 px-6">${element.ingreso_monto}</td>
