@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            color: green
+        }
+
+        span {
+            background-color: #aa1100;
+        }
+
+        #elemento1 {
+            text-decoration:underline;
+        }
+
+        li {
+            color:aqua;
+        }
+
+        .alerta {
+            padding: 10px;
+            height: 200px;
+            width: 300px;
+            border: 2px solid orange;
+            background-color: bisque;
+        }
+        .alerta > h1 {
+            color: #aa1100;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>
+            Pagina muestra
+        </h1>
+        <ul>
+            <li id="elemento1">item 1</li>
+            <li>item 2</li>
+        </ul>
+        <p>
+            <span>
+                Dentro de span
+            </span>
+
+            <div class="alerta">
+                <h1>
+                    Subtitulo
+                </h1>
+                Esto solo es una prueba
+            </div>
+
+            <h1>OTRO</h1>
+
+            <a href="https://google.com">google</a>
+        </p>
+    </div>
+
+    <script type="text/javascript">
+        var elementx = document.getElementById("elemento1");
+        var objClass = document.getElementsByClassName("alerta");
+
+        console.log(elementx);
+        elementx.append("<h2>Texto H2</h2>");
+        var itemh3 = document.createElement("input");
+
+        itemh3.innerText = "Texto de H3";
+
+            objClass[0].appendChild(itemh3);
+
+    </script>
+</body>
+</html>
